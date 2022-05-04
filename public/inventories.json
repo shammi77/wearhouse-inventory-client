@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "name": "Women Coat",
+        "img":"https://i.ibb.co/2Nf5Gpt/download-1.jpg",
+        "price":"$200",
+        "description":"Winter coats with a durable water resistant (DWR) treatment will be weather resistant, but will not perform as well as those made of GORE-TEX.",
+        "quantity": 500,
+        "supplier_name":"john.beg"
+    },
+    {
+        "id": 2,
+        "name": "T-shirt",
+        "img":"https://i.ibb.co/q9F3B8g/download-2.jpg",
+        "price":"$150",
+        "description":"Inventory is the accounting of items, component parts and raw materials that a company either uses in production or sells.",
+        "quantity": 600,
+        "supplier_name":"Alex Robin"
+    },
+    {
+        "id": 3,
+        "name": "Jump suit",
+        "img":"https://i.ibb.co/d7cqR8w/download-3.jpg",
+        "price":"$100",
+        "description":"The suit's specific purpose was for jumping from planes. Pilots and professional drivers also adopted this garment for their own lines of work, and it became synonymous not only with work.",
+        "quantity": 700,
+        "supplier_name":"Farsies Rasul"
+    },
+    {
+        "id": 4,
+        "name": "Tops",
+        "img":"https://i.ibb.co/5GsG7fz/download-4.jpg",
+        "price":"$50",
+        "description":"Refresh your wardrobe this season with our collection of must-have tops. Stay on top of your style game with tops, shirts, vests and t-shirts online at PLT.",
+        "quantity": 800,
+        "supplier_name":"Martana cong"
+    },
+    {
+        "id": 5,
+        "name": "Formal Pant t-shirt",
+        "img":"https://i.ibb.co/2qYnXzT/download.jpg",
+        "price":"$70",
+        "description":"Slim fit pant made of stretchy cotton fabric. Featuring front pockets, rear pockets and zip fly and top button fastening. ",
+        "quantity": 900,
+        "supplier_name":"Catling john"
+    },
+    {
+        "id": 6,
+        "name": "Customize cloth",
+        "img":"https://i.ibb.co/jDK8PFB/images.jpg",
+        "price":"$80",
+        "description":"Customize your own clothes! Choose your custom clothing with cool graphics, text or quotes. Design your clothes now!",
+        "quantity": 1500,
+        "supplier_name":"sun parsico"
+    }
+]

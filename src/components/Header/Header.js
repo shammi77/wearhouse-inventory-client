@@ -11,8 +11,10 @@ const Header = () => {
       <Link to="/home">Home</Link>
       <Link to="/additional">Additional</Link>
       <Link to="/blogs">Blogs</Link>
-      {/* <Link to="/signup">SignUp</Link>
-      <Link to="/login">Login</Link> */}
+      <Link to="/login">Login</Link>
+      <Link to="/signup">SignUp</Link> 
+       {/* 
+        */}
           </Nav>
       </Navbar>
     </div>
