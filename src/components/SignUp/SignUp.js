@@ -5,6 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from "../../firebase.init";
 import SocialLogin from "../Login/SocialLogin/SocialLogin";
+import { sendEmailVerification } from "firebase/auth";
 
 
 
@@ -42,7 +43,16 @@ const SignUp = () => {
             return;
       }
       createUserWithEmailAndPassword(email, password);
+      const verifyEmail=()=>{
+        sendEmailVerification(auth.currentUser)
+        .then(()=>{
+          console.log('Email verification sent');
+        })
+      }
+      verifyEmail();
+
   }
+  
 
   return (
     <div>
