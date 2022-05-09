@@ -17,6 +17,7 @@ import InvenTory from './components/InvenTory/InvenTory';
 function App() {
   return (
     <div>
+      <h1 className='text-center w-100 m-4 text-warning'>Dresses Inventory</h1>
       <Header></Header>
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>

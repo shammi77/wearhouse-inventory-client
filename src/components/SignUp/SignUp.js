@@ -43,12 +43,14 @@ const SignUp = () => {
             return;
       }
       createUserWithEmailAndPassword(email, password);
+      // send email verification
       const verifyEmail=()=>{
         sendEmailVerification(auth.currentUser)
         .then(()=>{
           console.log('Email verification sent');
         })
       }
+
       verifyEmail();
 
   }
