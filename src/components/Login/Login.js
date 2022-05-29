@@ -115,7 +115,7 @@ const Login = () => {
           {/* google sign in */}
           <button
             onClick={() => signInWithGoogle()}
-            className="btn btn-outline"
+            className="btn btn-primary"
           >
             Continue With Google
           </button>
