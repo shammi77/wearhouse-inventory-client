@@ -11,6 +11,7 @@ import Login from './components/Login/Login';
 import SignUp from './components/SignUp/SignUp';
 
 import InvenTory from './components/InvenTory/InvenTory';
+import PrivateRoute from './authentication/PrivateRoute';
 // import RequireAuth from './components/RequireAuth/RequireAuth';
 
 
@@ -25,7 +26,10 @@ function App() {
         <Route path="/blogs" element={<Blogs></Blogs>}></Route>
         <Route path='/additional' element={<Additional></Additional>}></Route>
         <Route path='/inventory' element={
-          <InvenTory></InvenTory>}></Route>
+          <PrivateRoute>
+            <InvenTory></InvenTory>
+          </PrivateRoute>
+          }></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/signup' element={<SignUp></SignUp>}></Route>
         

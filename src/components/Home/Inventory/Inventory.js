@@ -1,26 +1,31 @@
 import React from 'react';
-import { Button, Card } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 
-const Inventory = (inventory) => {
-    const {name,img,description,price,supplier_name,quantity} = inventory;
+const Inventory = ({inventory}) => {
+    const {_id,name,img,description,price,supplierName,quantity} = inventory;
+
+
+    const navigate = useNavigate();
+
+    const navigateToInventoryPage =id =>{
+        navigate(`/inventory`)
+    }
     return (
-        <div className='row'>
-            <div className="g-4  col-lg-4 col-md-6 col-sm-12  ">  
-        <div className="card">
-        <Card.Img variant="top" src={img} />
-        <Card.Body>
-          <Card.Title> Name: {name}</Card.Title>
-          <Card.Text>Price : {price}</Card.Text>
-          <Card.Text> Description : {description}</Card.Text>
-          <Card.Text> Quantity : {quantity}</Card.Text>
-          <Card.Text> Supplier Name : {supplier_name}</Card.Text>
-          <Button variant="primary"> Update</Button>
-        </Card.Body>
-        
-        </div>
-      </div>
-        </div>
-    );
+
+<div className="card lg:max-w-lg bg-base-400 shadow-xl flex">
+<div className="card-body">
+    <img className="" src={img} alt=''/>
+  <h2 className=" text-2xl text-bold">Name: {name}</h2>
+  <p> Description : {description}</p>
+  <h4>Price: {price}</h4>
+  <h4>Quantity : {quantity}</h4>
+  <h4>Supplier Name : {supplierName}</h4>
+  <div className="card-actions">
+    <button  onClick={()=> navigateToInventoryPage(_id)} className="btn btn-primary">Update</button>
+  </div>
+</div>
+</div>
+);
 };
 
 export default Inventory;
