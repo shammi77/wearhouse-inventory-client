@@ -1,6 +1,6 @@
 import React from "react";
-import {  Button, Nav, Navbar } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Button, Nav, Navbar } from "react-bootstrap";
+import { Link, useNavigate } from "react-router-dom";
 import "./Header.css";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
@@ -8,28 +8,26 @@ import { signOut } from "firebase/auth";
 
 const Header = () => {
   const [user] = useAuthState(auth);
+  const navigate = useNavigate();
+
   const handleSignOut = () => {
     signOut(auth);
+    localStorage.removeItem("accessToken");
+    navigate("/signup");
   };
 
   return (
-    <div className="container">
-    <Navbar bg="primary" variant="white">
-    <Nav className="header m-auto w-50">
-      <Link to="/home">Home</Link>
-      <Link to="/additional">Additional</Link>
-      <Link to="/blogs">Blogs</Link>
-      <Link to='/inventory'>Inventory</Link>
-      
-      <Link to="/signup">SignUp</Link> 
-      {user ? (
-          <Button onClick={handleSignOut}>Sign Out</Button>
-        ) : (
-          <Link to="/login">Login</Link>
-        )
-
-      }
-          </Nav>
+    <div>
+      <Navbar>
+        <Nav className="header item-center m-auto w-50">
+          {user ? (
+            <Button className="m-auto" onClick={handleSignOut}>
+              Sign Out
+            </Button>
+          ) : (
+            <Link to="/signup">SignUp</Link>
+          )}
+        </Nav>
       </Navbar>
     </div>
   );

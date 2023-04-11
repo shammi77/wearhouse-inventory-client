@@ -6,13 +6,12 @@ import {
 } from "react-firebase-hooks/auth";
 
 import { useForm } from "react-hook-form";
-import Loading from "../../components/Loading";
 import { Link, useNavigate } from "react-router-dom";
 import auth from "../../firebase.init";
 
 
 const SignUp = () => {
-  const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
+  const [signInWithGoogle, gUser,  gError] = useSignInWithGoogle(auth);
   const {
     register,
     formState: { errors },
@@ -22,11 +21,11 @@ const SignUp = () => {
   const [
     createUserWithEmailAndPassword,
     user,
-    loading,
+    
     error,
   ] = useCreateUserWithEmailAndPassword(auth);
 
-  const [updateProfile, updating, updateError] = useUpdateProfile(auth);
+  const [updateProfile,  updateError] = useUpdateProfile(auth);
 
  
 
@@ -34,9 +33,7 @@ const SignUp = () => {
 
   let signInError;
 
-  if (loading || gLoading || updating) {
-    return <Loading />;
-  }
+  
 
   if (error || gError || updateError) {
     signInError = (
@@ -45,7 +42,6 @@ const SignUp = () => {
   }
 
   if ( (user || gUser)) {
-    // console.log(user || gUser);
     navigate('/home');
     
   }

@@ -30,7 +30,7 @@ const Login = () => {
 
   useEffect(()=>{
     if (user || gUser) {
-      navigate(from , {replace : true});
+      navigate('/home');
     }
 
   }, [user,  gUser , from, navigate])
